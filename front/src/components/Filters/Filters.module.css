@@ -1,0 +1,43 @@
+.filter-wrapper{
+	@apply pb-8 grid justify-center gap-x-8 md:flex;
+}
+
+.btn-group{
+	@apply flex;
+}
+
+.btn-group .filter-btn{
+	@apply rounded-none;
+}
+
+.btn-group .filter-btn:first-of-type{
+	@apply rounded-l-lg;
+}
+
+.btn-group .filter-btn:last-of-type{
+	@apply rounded-r-lg;
+}
+
+.filter-btn{
+	@apply bg-indigo-800 text-indigo-300 border border-indigo-800 
+						text-sm leading-none justify-center px-3 py-2 flex items-center 
+						gap-x-2 transition-all select-none rounded-lg;
+}
+
+
+body .filter-btn:hover{
+	color: var(--green);
+	@apply bg-indigo-900 border-indigo-900;
+}
+
+.filter-btn.active,
+.filter-btn.active:hover{
+	background: var(--green);
+	border-color: var(--green);
+	@apply text-indigo-800 font-medium;
+}
+
+
+.filter-title{
+	@apply text-indigo-300 text-sm leading-none pb-1.5 select-none;
+}

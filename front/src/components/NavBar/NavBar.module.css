@@ -1,0 +1,56 @@
+body .brand{
+	animation-name: brand-animation;
+	animation-duration: 6s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes brand-animation{
+	0%{ filter: drop-shadow(0 0 10px var(--green)); }
+	20%{ filter: none; }
+	60%{ filter: none; }
+	61%{ filter: drop-shadow(0 0 10px var(--green)); }
+	63%{ filter: none; }
+	65%{ filter: drop-shadow(0 0 10px var(--green)); }
+	67%{ filter: none; }
+}
+
+
+.button{
+	@apply border-2 border-white text-white 
+					text-sm leading-none font-medium 
+					px-4 py-1 grid items-center select-none
+					opacity-60 rounded-xl transition-all
+					hover:opacity-100;
+}
+
+body .button:hover,
+body .button.active{
+	background: var(--green);
+	border-color: var(--green);
+	@apply text-indigo-800 shadow-xl;
+}
+
+
+.fav-btn{
+	@apply text-red-700 flex gap-x-1 items-center px-3 py-1 transition-all 
+						rounded-xl hover:bg-red-700 hover:text-white;
+}
+
+.fav-btn > span{
+	@apply text-xs leading-none uppercase font-semibold pl-2 transition-all;
+}
+
+.fav-btn:hover > span,
+.fav-btn:hover svg{
+	@apply text-white;
+}
+
+
+.fav-indicator{
+	@apply text-white text-xs w-full h-full grid place-content-center 
+						absolute rounded-full;
+}
+
+.fav-btn:hover .fav-indicator{
+	@apply text-red-700;
+}

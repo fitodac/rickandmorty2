@@ -1,0 +1,21 @@
+.character-description{
+	@apply grid gap-y-4;
+}
+
+.character-description-title {
+	@apply text-indigo-100 text-2xl leading-none font-semibold tracking-tight
+						whitespace-nowrap text-ellipsis overflow-hidden select-none
+						md:text-5xl;
+}
+
+.character-description-item{
+	@apply text-indigo-100 flex justify-between;
+}
+
+.character-description-item > span{
+	@apply leading-none select-none;
+}
+
+.character-description-item > span + span{
+	@apply font-bold;
+}

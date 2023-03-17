@@ -1,0 +1,48 @@
+body .loader{
+	@apply w-8 md:w-16;
+
+	animation-name: loader-animation;
+	animation-duration: .4s;
+	animation-iteration-count: infinite;
+}
+
+
+@keyframes loader-animation{
+	0%{
+		filter: drop-shadow(0 0 20px var(--green));
+		transform: rotate(0deg) scale(1);
+	}
+
+	25%{
+		filter: drop-shadow(0 0 30px var(--green));
+		transform: rotate(90deg);
+	}
+
+	50%{
+		filter: drop-shadow(0 0 20px var(--green));
+		transform: rotate(180deg) scale(1.1);
+	}
+
+	75%{
+		filter: drop-shadow(0 0 30px var(--green));
+		transform: rotate(270deg);
+	}
+
+	100%{
+		filter: drop-shadow(0 0 20px var(--green));
+		transform: rotate(360deg) scale(1);
+	}
+}
+
+
+.error-title{
+	@apply text-white text-4xl font-bold leading-none mt-8;
+}
+
+.error-info{
+	@apply text-white text-xl font-medium mt-3;
+}
+
+.error-message{
+	@apply text-white text-sm leading-none mt-2;
+}
